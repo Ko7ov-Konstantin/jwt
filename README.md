@@ -21,8 +21,8 @@ This will copy the necessary migration file to your database/migrations folder.
 
 Next you must add *JWTSubjectTrait* to your User model from *konstantinkotov\jwt\Traits* folder:
 
-```bash
-use JWTSubjectTrait.php
+```php
+use Konstantinkotov\jwt\Traits\JWTSubjectTrait;
 ```
 
 ## How to use:
@@ -32,3 +32,9 @@ $token = $user->generate();
 ```
 
 This will create a token, save it to the api_token column in users table.
+Or you can use it using *\Konstantinkotov\jwt\JWT* class. For example:
+```php
+\Konstantinkotov\jwt\JWT::token()->generate(<token_size>);
+```
+
+The <token_size> here is not required. By default, the size is 100.
