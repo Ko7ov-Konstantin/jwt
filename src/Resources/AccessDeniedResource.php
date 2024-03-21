@@ -9,9 +9,10 @@ use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class AccessDeniedResource extends JsonResource
 {
-    public static $wrap = null;
     public function toArray(Request $request) : array
     {
+        self::withoutWrapping();
+
         return [
             'error' => 'Unauthorized'
         ];

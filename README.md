@@ -39,21 +39,28 @@ The token will be searched in Authorization inside the headers params.
 
 ### Step 3:
 
-If you need token-based protection you can use a ready-made middleware. Just insert the code below, to your App\Http\Kernel.php
-```php
-protected $middlewareGroups = [
-    ...
-    \Konstantinkotov\jwt\Middleware\AuthorizationMiddleware::class
-];
+If you need ready resource to your checks. You can use:
 
-protected $middlewareAliases = [
-    ...
-    "jwt.protection" => \Konstantinkotov\jwt\Middleware\AuthorizationMiddleware::class
-];
+```php
+return (new \Konstantinkotov\jwt\Resources\AccessAllowedResource());
+
+or
+
+return (new \Konstantinkotov\jwt\Resources\AccessDeniedResource());
+
+or
+
+return (new \Konstantinkotov\jwt\Resources\LogoutResource());
 ```
 
-It will return a JSON resource, with status 401, if the request is not authorized. For example:
-
+AccessAllowedResource will return, with status code 200:
+```json
+{
+  "token": "<your_api_token>",
+  "request_type": "bearer"
+}
+```
+AccessDeniedResource will return, with status code 401:
 ```json
 {
   "error": "Unauthorized"
