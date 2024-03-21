@@ -1,5 +1,7 @@
 <?php
 
+namespace Konstantinkotov\jwt;
+
 use Konstantinkotov\jwt\Application\TokenApplication;
 
 class JWT
