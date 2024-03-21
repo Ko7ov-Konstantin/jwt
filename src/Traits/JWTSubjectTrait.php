@@ -1,6 +1,6 @@
 <?php
 
-namespace Konstantinkotov\jwt\src\Traits;
+namespace Konstantinkotov\jwt\Traits;
 
 trait JWTSubjectTrait
 {

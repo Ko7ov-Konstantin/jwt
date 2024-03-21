@@ -19,7 +19,7 @@ This will copy the necessary migration file to your database/migrations folder.
 
 ### Step 2:
 
-Next you must add *JWTSubjectTrait* to your User model from *konstantinkotov/jwt/src/Traits* folder:
+Next you must add *JWTSubjectTrait* to your User model from *konstantinkotov\jwt\Traits* folder:
 
 ```bash
 use JWTSubjectTrait.php
