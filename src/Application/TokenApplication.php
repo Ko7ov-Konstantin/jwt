@@ -1,6 +1,6 @@
 <?php
 
-namespace Application;
+namespace KonstantinKotov\jwt\Application;
 
 use Illuminate\Support\Str;
 

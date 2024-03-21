@@ -1,6 +1,6 @@
 <?php
 
-use Application\TokenApplication;
+use KonstantinKotov\jwt\Application\TokenApplication;
 
 class JWT
 {

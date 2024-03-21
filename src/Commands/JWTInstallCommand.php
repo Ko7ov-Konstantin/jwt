@@ -1,10 +1,10 @@
 <?php
 
-namespace Commands;
+namespace KonstantinKotov\jwt\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Artisan;
-use Providers\JWTServiceProvider;
+use KonstantinKotov\jwt\Providers\JWTServiceProvider;
+
 
 class JWTInstallCommand extends Command
 {
