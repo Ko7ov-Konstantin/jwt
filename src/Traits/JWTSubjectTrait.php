@@ -8,7 +8,7 @@ trait JWTSubjectTrait
 {
     public int $token_length = 100;
 
-    public function generate(): string
+    public function generateToken(): string
     {
         $token = JWT::token()->generate($this->token_length);
         $this->api_token = $token;
