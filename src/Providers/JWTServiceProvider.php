@@ -14,7 +14,7 @@ class JWTServiceProvider extends ServiceProvider
         $migration_filepath = base_path('database/migrations/') . $now.'_add_api_token_to_users_table.php';
 
         $this->publishes([
-            __DIR__.'/../Migrations/add_api_token_to_users_table.php' => $migration_filepath,
+            __DIR__.'/../Migrations/add_api_token_to_users_table.php' => $migration_filepath
         ]);
 
         $this->commands([

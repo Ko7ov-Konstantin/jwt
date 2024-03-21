@@ -24,6 +24,29 @@ Next you have to add *JWTSubjectTrait* to your User model:
 use Konstantinkotov\jwt\Traits\JWTSubjectTrait;
 ```
 
+### Step 3:
+
+If you need token-based protection you can use a ready-made middleware. Just insert the code below, to your App\Http\Kernel.php
+```php
+protected $middlewareGroups = [
+    ...
+    \Konstantinkotov\jwt\Middlewares\AuthorizationMiddleware::class
+];
+
+protected $middlewareAliases = [
+    ...
+    "JWTProtection" => \Konstantinkotov\jwt\Middlewares\AuthorizationMiddleware::class
+];
+```
+
+It will return a JSON resource, with status 401, if the request is not authorized. For example:
+
+```json
+{
+  "error": "Unauthorized"
+}
+```
+
 ## How to use:
 
 ```php
@@ -31,6 +54,7 @@ $token = $user->generate();
 ```
 
 This will create a token, save it to the api_token column in users table.
+
 Or you can use it using *JWT* class. For example:
 ```php
 \Konstantinkotov\jwt\JWT::token()->generate(<token_size>);
