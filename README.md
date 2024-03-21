@@ -20,9 +20,22 @@ This will copy the necessary migration file to your database/migrations folder.
 ### Step 2:
 
 Next you have to add *JWTSubjectTrait* to your User model:
+
 ```php
-use Konstantinkotov\jwt\Traits\JWTSubjectTrait;
+use Konstantinkotov\jwt\Traits\JWTModelTrait;
 ```
+
+If you need quickly access to token, you can add JWTControllerTrait to your controller files. Example:
+```php
+use Konstantinkotov\jwt\Traits\JWTControllerTrait;
+```
+
+You'll have the access to the token inside your controller. You can obtain the token, using:
+```php
+$token = $this->token();
+```
+
+The token will be searched in Authorization inside the headers params.
 
 ### Step 3:
 
