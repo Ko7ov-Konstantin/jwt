@@ -22,7 +22,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Konstantinkotov\\jwt\\Providers\\JWTServiceProvider"
+        "Konstantinkotov\\jwt\\src\\Providers\\JWTServiceProvider"
       ]
     }
   },
