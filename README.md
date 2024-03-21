@@ -47,10 +47,6 @@ return (new \Konstantinkotov\jwt\Resources\AccessAllowedResource());
 or
 
 return (new \Konstantinkotov\jwt\Resources\AccessDeniedResource());
-
-or
-
-return (new \Konstantinkotov\jwt\Resources\LogoutResource());
 ```
 
 AccessAllowedResource will return, with status code 200:
