@@ -30,12 +30,12 @@ If you need token-based protection you can use a ready-made middleware. Just ins
 ```php
 protected $middlewareGroups = [
     ...
-    \Konstantinkotov\jwt\Middlewares\AuthorizationMiddleware::class
+    \Konstantinkotov\jwt\Middleware\AuthorizationMiddleware::class
 ];
 
 protected $middlewareAliases = [
     ...
-    "JWTProtection" => \Konstantinkotov\jwt\Middlewares\AuthorizationMiddleware::class
+    "jwt.protection" => \Konstantinkotov\jwt\Middleware\AuthorizationMiddleware::class
 ];
 ```
 

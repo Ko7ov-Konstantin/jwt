@@ -1,6 +1,6 @@
 <?php
 
-namespace Konstantinkotov\jwt\Middlewares;
+namespace Konstantinkotov\jwt\Middleware;
 
 use Closure;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
