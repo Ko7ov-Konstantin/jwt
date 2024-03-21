@@ -14,6 +14,11 @@
       "KonstantinKotov\\jwt\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+
+    }
+  },
   "extra": {
     "laravel": {
       "providers": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace KonstantinKotov\jwt\Providers;
+namespace Konstantinkotov\jwt\src\Providers;
 
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
