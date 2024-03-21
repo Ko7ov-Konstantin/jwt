@@ -23,6 +23,9 @@
     "laravel": {
       "providers": [
         "Konstantinkotov\\jwt\\Providers\\JWTServiceProvider"
+      ],
+      "middlewares": [
+        "Konstantinkotov\\jwt\\Middleware"
       ]
     }
   },
