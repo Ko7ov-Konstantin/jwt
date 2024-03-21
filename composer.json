@@ -11,7 +11,7 @@
   },
   "autoload": {
     "psr-4": {
-      "KonstantinKotov\\jwt\\": "src/"
+      "Konstantikotov\\jwt\\": "src/"
     }
   },
   "autoload-dev": {
@@ -22,7 +22,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "KonstantinKotov\\jwt\\Providers\\JWTServiceProvider"
+        "Konstantinkotov\\jwt\\Providers\\JWTServiceProvider"
       ]
     }
   },

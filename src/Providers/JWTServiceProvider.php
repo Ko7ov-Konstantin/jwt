@@ -4,6 +4,7 @@ namespace Konstantinkotov\jwt\src\Providers;
 
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
+use KonstantinKotov\jwt\src\Commands\JWTInstallCommand;
 
 class JWTServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,10 @@ class JWTServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'../Migrations/add_api_token_to_users_table.php' => $migration_filepath,
+        ]);
+
+        $this->commands([
+            JWTInstallCommand::class
         ]);
     }
 }
