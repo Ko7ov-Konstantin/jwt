@@ -1,0 +1,30 @@
+{
+  "name": "konstantinkotov/jwt",
+  "description": "A custom jwt token generator",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Konstantinkotov\\Jwt\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Konstantinkotov\\Jwt\\Providers\\JWTServiceProvider"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Konstantin Kotov",
+      "email": "ko7ov.konstantin@gmail.com"
+    }
+  ]
+}
